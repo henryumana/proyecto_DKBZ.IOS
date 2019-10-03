@@ -21,15 +21,13 @@ import WebKit
     override func loadView() {
         webView = WKWebView()
 
-        //If you want to implement the delegate
-        //webView?.navigationDelegate = self
-
+    
         view = webView
     }
     
 
     @IBAction func inglesButtonPressed(_ sender: Any) {
-        guard let url = URL(string: "https://dkbz-dummy-api.herokuapp.com?lang=eng")else{
+        guard let url = URL(string: "https://dkbz-dummy-api.herokuapp.com/")else{
             fatalError("Error getting URL")
         }
         var request = URLRequest(url: url)
@@ -59,7 +57,7 @@ import WebKit
   
    
     @IBAction func español(_ sender: Any) {
-     guard let url = URL(string: "https://dkbz-dummy-api.herokuapp.com?lang=esp")else{
+     guard let url = URL(string: "https://dkbz-dummy-api.herokuapp.com/")else{
          fatalError("Error getting URL")
      }
      var request = URLRequest(url: url)
@@ -87,7 +85,7 @@ import WebKit
     }
     
     @IBAction func portugues(_ sender: Any) {
-        guard let url = URL(string: "https://dkbz-dummy-api.herokuapp.com?lang=por")else{
+        guard let url = URL(string: "https://dkbz-dummy-api.herokuapp.com/")else{
             fatalError("Error getting URL")
         }
         var request = URLRequest(url: url)
